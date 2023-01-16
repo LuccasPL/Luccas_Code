@@ -1,2 +1,116 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+numbers = []
+
+
+def insert_value(val):
+    numbers.append(val)
+    print("Valor inserido.")
+
+
+def print_list():
+    print(numbers)
+
+
+def clear_list():
+    numbers.clear()
+    print("Lista apagada.")
+
+
+def find_max():
+    print("Maior número: ", max(numbers))
+
+
+def find_min():
+    print("Menor número: ", min(numbers))
+
+
+def print_sum():
+    print("Soma dos números: ", sum(numbers))
+
+
+def double_values():
+    numbers[:] = [x * 2 for x in numbers]
+    print("Valores dobrados.")
+
+
+def print_even():
+    print("Valores pares: ", [x for x in numbers if x % 2 == 0])
+
+
+def print_odd():
+    print("Valores ímpares: ", [x for x in numbers if x % 2 != 0])
+
+
+def print_positive():
+    print("Valores positivos: ", [x for x in numbers if x > 0])
+
+
+def print_negative():
+    print("Valores negativos: ", [x for x in numbers if x < 0])
+
+
+def reverse_list():
+    numbers.reverse()
+    print("Lista reversa.")
+
+
+def sort_asc():
+    numbers.sort()
+    print("List ordenada em ordem crescente.")
+
+
+def sort_desc():
+    numbers.sort(reverse=True)
+    print("Lista ordenada em ordem decrescente.")
+
+print('\n')
+while True:
+    print("1 - Inserir valor na lista")
+    print("2 - Imprimir lista")
+    print("3 - Apagar lista")
+    print("4 - Procurar o maior número da lista")
+    print("5 - Procurar o menor número da lista")
+    print("6 - Imprimir o valor da soma dos números da lista")
+    print("7 - Substituir cada um dos valores da lista pelo seu dobro")
+    print("8 - Imprimir apenas os valores pares")
+    print("9 - Imprimir apenas os valores ímpares")
+    print("10 - Imprimir apenas os valores positivos")
+    print("11 - Imprimir apenas os valores negativos")
+    print("12 - Inverter o conteúdo da lista")
+    print("13 - Ordenar a lista por ordem crescente")
+    print("14 - Ordenar a lista por ordem decrescente")
+    print("0 - Sair do programa")
+    option = int(input("Escolha uma opção: "))
+    print('\n')
+
+    if option == 1:
+        val = int(input("Entre com um valor: "))
+        insert_value(val)
+    elif option == 2:
+        print_list()
+    elif option == 3:
+        clear_list()
+    elif option == 4:
+        find_max()
+    elif option == 5:
+        find_min()
+    elif option == 6:
+        print_sum()
+    elif option == 7:
+        double_values()
+    elif option == 8:
+        print_even()
+    elif option == 9:
+        print_odd()
+    elif option == 10:
+        print_positive()
+    elif option == 11:
+        print_negative()
+    elif option == 12:
+        reverse_list()
+    elif option == 13:
+        sort_asc()
+    elif option == 14:
+        sort_desc()
+    elif option == 0:
+        break
+    print('\n')
